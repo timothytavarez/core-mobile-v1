@@ -28,35 +28,15 @@ angular.module('nete', ['ionic',
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-    .state('neteApp.playlists', {
-      url: '/playlists',
+    .state('neteApp.home', {
+      url: '/home',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/home-root.html',
+          // templateUrl: 'templates/playlist.html',
+          controller: 'HomeCtrl'
         }
       }
-    })
-
-  .state('neteApp.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  })
-  .state('neteApp.home', {
-    url: '/home',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/home-root.html',
-        // templateUrl: 'templates/playlist.html',
-        controller: 'HomeCtrl'
-      }
-    }
   });
   
   // if none of the above states are matched, use this as the fallback
