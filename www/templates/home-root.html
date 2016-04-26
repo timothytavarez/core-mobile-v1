@@ -1,5 +1,12 @@
 <ion-view view-title="Home">
   <ion-content>
-    <h1>Herp Derp</h1>
+    <section ng-controller="HomeCtrl as vm">
+      
+    <div ng-repeat="article in vm.articlesList">
+      <p>{{article.articleTitle}}</p>
+    </div>
+  
+    
+    </section>
   </ion-content>
 </ion-view>
