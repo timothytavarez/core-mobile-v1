@@ -19,8 +19,6 @@
             
         }
         
-        console.log('ServicesController initialized!');
-        
     }
     
 })(angular);

@@ -1,17 +1,19 @@
 angular.module('nete', [
 
-// Angular and Nete dependencies
+// Dependencies
   'ionic',
   'firebase',
   'ngSanitize',
 
-// Nete modules
+// Modules
   'nete.menu',
   'nete.config',
   'nete.home',
+  'nete.content',
   'nete.services'
 
 ])
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -34,6 +36,7 @@ angular.module('nete', [
   $urlRouterProvider.otherwise('/app/home');
   
 })
+
 .run(['$rootScope', '$log', '$state', function($rootScope, $log, $state) {
 		$rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 

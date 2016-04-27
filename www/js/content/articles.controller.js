@@ -2,12 +2,12 @@
     /* global angular */
     
     angular
-    .module('nete.home')
-    .controller('HomeController', HomeController);
+    .module('nete.content')
+    .controller('ArticlesController', ArticlesController);
     
-    HomeController.$inject = ['FBURL', '$scope', '$firebaseArray', 'articles'];
+    ArticlesController.$inject = ['articles'];
     
-    function HomeController(FBURL, $scope, $firebaseArray, articles) {
+    function ArticlesController(articles) {
         
         var vm = this;
         
@@ -18,7 +18,5 @@
             vm.articlesList = articles.getArticlesList();
             
         }
-        
     }
-    
-}) (angular);
+})(angular);
