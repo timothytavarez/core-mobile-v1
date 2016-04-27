@@ -2,16 +2,16 @@
     /* global angular */
     
     angular
-    .module('nete.services', ['ui.router'])
+    .module('nete.home', ['ui.router'])
     .config(['$stateProvider', function ($stateProvider) {
         
         $stateProvider
-        .state('neteApp.servicesRoot', {
-            url: '/services',
+        .state('neteApp.home', {
+            url: '/home',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/services-root.html',
-                    controller: 'ServicesController',
+                    templateUrl: 'templates/home-root.html',
+                    controller: 'HomeController',
                     controllerAs: 'vm'
                 }
             }

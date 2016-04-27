@@ -1,9 +1,24 @@
 <ion-view view-title="Services">
   <ion-content>
     <section ng-controller="ServicesController as vm">
-    
+
     <div class="list card" ng-repeat="service in vm.servicesList">
         
+        <div class="item item-avatar">
+            <img ng-src="{{service.libraryLogo}}">
+            <h2>{{service.serviceTitle}}</h2>
+            <p>{{service.serviceLocation}}</p>
+        </div>
+
+        <div class="item item-body">
+            <img class="full-image" ng-src="{{service.serviceImageURL}}">
+            <p ng-bind-html="service.serviceDescription"></p>
+            <p>
+                <a href="#" class="subdued">1 Like</a>
+                <a href="#" class="subdued">5 Comments</a>
+            </p>
+        </div>
+    
     </div>
     
     </section>

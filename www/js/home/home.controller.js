@@ -5,8 +5,11 @@
     
     angular
     .module('nete.home')
-    .controller('HomeCtrl', ['FBURL', '$scope', '$firebaseArray', 'articles',
-    function (FBURL, $scope, $firebaseArray, articles) {
+    .controller('HomeController', HomeController)
+    
+    HomeController.$inject = ['FBURL', '$scope', '$firebaseArray', 'articles']
+    
+    function HomeController(FBURL, $scope, $firebaseArray, articles) {
         
         var vm = this;
         
@@ -18,7 +21,6 @@
             
         }
         
-        
-    }]);
+    }
     
 }) (angular);

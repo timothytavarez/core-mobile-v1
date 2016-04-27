@@ -11,11 +11,11 @@
         
         var vm = this;
         
-        vm.listServices = listServices;
+        vm.listServices = listServices();
         
         function listServices() {
             
-            vm.servicesList = services.getServicesList;
+            vm.servicesList = services.getServicesList();
             
         }
         

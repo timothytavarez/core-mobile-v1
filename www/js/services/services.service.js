@@ -10,7 +10,7 @@
     
     function services(FBURL, $firebaseArray) {
         
-        var servicesRef = new Firebase(FBURL + 'services/');
+        var servicesRef = new Firebase(FBURL + 'services');
         
         var service = {
             getServicesList: getServicesList

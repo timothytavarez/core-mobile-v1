@@ -6,7 +6,7 @@ angular.module('nete', [
   'ngSanitize',
 
 // Nete modules
-  'nete.controllers',
+  'nete.menu',
   'nete.config',
   'nete.home',
   'nete.services'
@@ -29,27 +29,10 @@ angular.module('nete', [
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
-
-  .state('neteApp', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
-    .state('neteApp.home', {
-      url: '/home',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/home-root.html',
-          // templateUrl: 'templates/playlist.html',
-          controller: 'HomeCtrl'
-        }
-      }
-  });
   
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
+  
 })
 .run(['$rootScope', '$log', '$state', function($rootScope, $log, $state) {
 		$rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
