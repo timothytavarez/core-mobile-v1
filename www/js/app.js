@@ -3,11 +3,13 @@ angular.module('nete', [
 // Angular and Nete dependencies
   'ionic',
   'firebase',
+  'ngSanitize',
 
 // Nete modules
   'nete.controllers',
   'nete.config',
-  'nete.home'
+  'nete.home',
+  'nete.services'
 
 ])
 .run(function($ionicPlatform) {
