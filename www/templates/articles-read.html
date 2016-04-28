@@ -1,6 +1,19 @@
-<ion-view view-title="News: {{article.articleTitle}}">
+<ion-view view-title="News: {{vm.article.articleTitle}}">
     <ion-content>
-        <section ng-controller="HomeCtrl as vm">
+        <section ng-controller="ArticlesController as vm">
+            
+            <div class="item item-body">
+                <img class="full-image" ng-src="{{vm.article.articleImageBanner}}">
+            </div>
+            
+            
+            <div class="row">
+                <h4>{{vm.article.articleTitle}}</h4>
+            </div>
+            
+            <div class="row">
+                <p ng-bind-html="vm.article.articleContent"></p>
+            </div>
             
         </section>
     </ion-content>

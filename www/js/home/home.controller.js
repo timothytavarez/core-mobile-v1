@@ -5,9 +5,11 @@
     .module('nete.home')
     .controller('HomeController', HomeController);
     
-    HomeController.$inject = ['FBURL', '$scope', '$firebaseArray', 'articles'];
+    HomeController.$inject = ['FBURL', '$scope', '$firebaseArray', 'articles', 
+    '$state', '$stateParams', '$rootScope'];
     
-    function HomeController(FBURL, $scope, $firebaseArray, articles) {
+    function HomeController(FBURL, $scope, $firebaseArray, articles, $state,
+    $stateParams, $rootScope) {
         
         var vm = this;
         
@@ -16,6 +18,7 @@
         function listArticles() {
             
             vm.articlesList = articles.getArticlesList();
+            console.log(vm.articlesList);
             
         }
         

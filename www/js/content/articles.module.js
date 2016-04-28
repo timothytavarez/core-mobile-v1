@@ -3,14 +3,19 @@
     
     angular
     .module('nete.content', ['ui.router'])
-    .config(['$stateProvider', function ($stateProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', 
+    function ($stateProvider, $urlRouterProvider) {
         
         $stateProvider
-        .state('articleRead', {
-            url: 'article/:id',
-            templateUrl: 'templates/articles-read.html',
-            controller: 'ArticlesController',
-            controllerAs: 'vm'
+        .state('neteApp.readArticle', {
+            url: '/articles/:articleID',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/articles-read.html',
+                    controller: 'ArticlesController',
+                    controllerAs: 'vm'
+                }
+            }
         });
         
     }]);
