@@ -66,4 +66,20 @@ angular.module('nete', [
 		});
 		
 	}
-]);
+]).run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+  };
+
+  window.plugins.OneSignal.init("5a0f9fa4-7270-4a69-b541-fbc103cd92d1",
+                                 {googleProjectNumber: "1019601537390"},
+                                 notificationOpenedCallback);
+  
+  // Show an alert box if a notification comes in when the user is in your app.
+  window.plugins.OneSignal.enableInAppAlertNotification(true);
+  });
+});
