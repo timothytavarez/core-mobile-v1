@@ -1,0 +1,21 @@
+<ion-view view-title="Locations and Hours">
+    <ion-content>
+        <section ng-controller="LocationsController as vm">
+            
+            <div style="height:400px;">
+                <ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom">
+                    
+                    <ui-gmap-markers 
+                        models="vm.locationList"
+                        idKey="vm.locationList.$id" 
+                        coords="'coordinates'"
+                    ></ui-gmap-markers>
+                    
+                </ui-gmap-google-map>
+                
+            </div>
+            <p>Hurro</p>
+            
+        </section>
+    </ion-content>
+</ion-view>

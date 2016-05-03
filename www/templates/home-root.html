@@ -4,21 +4,24 @@
   
   <div class="list card" ng-repeat="article in vm.articlesList">
 
-  <div class="item item-avatar">
+  <div class="item item-avatar item-bgcolor">
     <img ng-src="{{article.articleLogo}}">
     <h2>{{article.articleTitle}}</h2>
     <p>{{article.articleDate | date}}</p>
   </div>
 
   <div class="item item-body">
-    <img class="full-image" ng-src="{{article.articleImageBanner}}"
+    <img class="full-image img-shadow" ng-src="{{article.articleImageBanner}}"
     ui-sref="neteApp.readArticle({articleID: article.$id})">
     <p ng-bind-html="article.articleContent">
     </p>
   </div>
 
 </div>
+
+
     
     </section>
+    
   </ion-content>
 </ion-view>
