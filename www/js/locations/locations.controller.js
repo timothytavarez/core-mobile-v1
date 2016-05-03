@@ -1,6 +1,5 @@
 (function (angular) { 'use strict';
     /* global angular */
-    /* global google */
 
     angular
     .module('nete.locations')
@@ -17,7 +16,7 @@
         vm.getLocations = getLocations();
         vm.locationList;
        
-       vm.map = { center: { latitude: 38.84, longitude: -104.83 }, zoom: 6 };
+       vm.map = { center: { latitude: 51.9476, longitude: 5.5184 }, zoom: 12 };
         
         function getLocations() {
             

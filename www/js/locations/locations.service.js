@@ -13,7 +13,6 @@
         
         var service = {
             getLocationsList: getLocationsList,
-            // getLocation: getLocation
         };
         
         return service;
@@ -24,15 +23,8 @@
             
             return $firebaseArray(locationsRef);
             
-            
         }
         
-        // function getLocation() {
-        //     var locationRef = new Firebase(FBURL + '/locations' + $stateParams.locationID);
-            
-        //     return $firebaseObject(locationRef);
-            
-        // }
     }
     
 })(angular);
