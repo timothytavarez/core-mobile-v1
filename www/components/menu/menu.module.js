@@ -10,7 +10,7 @@
         .state('neteApp', {
             url: '/app',
             abstract: true,
-            templateUrl: 'templates/menu.html',
+            templateUrl: 'components/menu/menu-root.html',
             controller: 'LoginController'
         });
         

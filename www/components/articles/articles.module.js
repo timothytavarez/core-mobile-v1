@@ -11,7 +11,7 @@
             url: '/articles/:articleID',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/articles-read.html',
+                    templateUrl: 'components/articles/articles-read.html',
                     controller: 'ArticlesController',
                     controllerAs: 'vm'
                 }

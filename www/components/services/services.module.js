@@ -10,7 +10,7 @@
             url: '/services',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/services-root.html',
+                    templateUrl: 'components/services/services-root.html',
                     controller: 'ServicesController',
                     controllerAs: 'vm'
                 }

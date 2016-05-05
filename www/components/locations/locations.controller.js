@@ -16,7 +16,7 @@
         vm.getLocations = getLocations();
         vm.locationList;
        
-       vm.map = { center: { latitude: 51.9476, longitude: 5.5184 }, zoom: 12 };
+       vm.map = { center: { latitude: 38.8401481, longitude: -104.8251865 }, zoom: 12 };
         
         function getLocations() {
             

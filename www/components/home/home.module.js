@@ -2,16 +2,16 @@
     /* global angular */
     
     angular
-    .module('nete.events')
+    .module('nete.home', ['ui.router'])
     .config(['$stateProvider', function ($stateProvider) {
         
         $stateProvider
-        .state('neteApp.eventsRoot', {
-            url: '/events',
+        .state('neteApp.home', {
+            url: '/home',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/events-root.html',
-                    controller: 'EventsController',
+                    templateUrl: 'components/home/home-root.html',
+                    controller: 'HomeController',
                     controllerAs: 'vm'
                 }
             }

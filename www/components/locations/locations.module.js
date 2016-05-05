@@ -11,7 +11,7 @@
             url: '/locations',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/locations-root.html',
+                    templateUrl: 'components/locations/locations-root.html',
                     controller: 'LocationsController',
                     controllerAs: 'vm'
                 }

@@ -10,6 +10,16 @@
                         coords="'coordinates'"
                     ></ui-gmap-markers>
                 </ui-gmap-google-map>
+
+            <div class="list">
+
+                <a class="item item-thumbnail-left" ng-repeat="location in vm.locationList" href="#">
+                  <img ng-src="{{location.locationThumbnail}}">
+                  <h2>{{location.locationName}}</h2>
+                  <p>{{location.locationDescription}}</p>
+                </a>
+            
+            </div>
                 
             </div>
             
