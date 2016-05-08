@@ -2,12 +2,12 @@
     /* global angular */
     
     angular
-    .module('nete.community')
+    .module('nete.communities', ['ui.router'])
     .config(['$stateProvider', function ($stateProvider) {
         
         $stateProvider
-        .state('neteApp.communityRoot', {
-            url: 'community/'
+        .state('neteApp.communitiesRoot', {
+            url: 'communities/'
         });
         
     }]);

@@ -12,4 +12,4 @@ angular.module('nete.config', [])
 
   // The FBURL constant is used throughout the application for DRY purposes.
   // We will have to use the FBURL a LOT for referencing our Firebase.
-  .constant('FBURL', 'https://nete-services.firebaseio.com/');
+  .constant('FBURL', 'https://burning-inferno-8566.firebaseio.com/');

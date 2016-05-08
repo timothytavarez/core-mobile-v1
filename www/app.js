@@ -13,7 +13,8 @@ angular.module('nete', [
   'nete.home',
   'nete.content',
   'nete.services',
-  'nete.locations'
+  'nete.locations',
+  'nete.communities',
 
 ])
 .run(function($ionicPlatform) {
@@ -39,8 +40,15 @@ angular.module('nete', [
   
 })
 
-// This .run provides state change debugging within the browser console. 
-.run(['$rootScope', '$log', '$state', function($rootScope, $log, $state) {
+
+.run(['$rootScope', '$log', '$state', 'auth', function($rootScope, $log, $state, auth) {
+  
+  // This $rootScope execution provides a loggedIn state that is bound to the user.
+  auth.$onAuth(function(user) {
+        $rootScope.loggedIn = !!user;
+      });
+  
+  // These $rootScope executions provide state change debugging within the browser console. 
 		$rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 
 			$log.debug('Successfully changed states');

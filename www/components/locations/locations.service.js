@@ -6,9 +6,9 @@
     .module('nete.locations')
     .factory('locations', locations);
     
-    locations.$inject['FBURL', '$firebaseArray', '$firebaseObject', '$stateParams'];
+    locations.$inject = ['FBURL', '$firebaseArray', '$firebaseObject'];
     
-    function locations(FBURL, $firebaseArray, $firebaseObject, $stateParams) {
+    function locations(FBURL, $firebaseArray, $firebaseObject) {
         var locationsRef = new Firebase(FBURL + '/locations');
         
         var service = {

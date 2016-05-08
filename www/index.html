@@ -6,7 +6,7 @@
     <title></title>
     
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
     
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -20,10 +20,10 @@
     <script src="cordova.js"></script>
 
     <!-- Nete Mobile Configuration -->
-    <script src="components/app.js"></script>
+    <script src="app.js"></script>
     <script src="lib/ionic/js/angularfire.min.js"></script>
     <script src="lib/ionic/js/firebase-web.js"></script>
-    <script src="components/config.js"></script>
+    <script src="config.js"></script>
     
     <!-- Nete Dependencies -->
     <script src="lib/js/ng-cordova.min.js"></script>
@@ -31,9 +31,15 @@
     <script src="lib/js/angular-simple-logger.js"></script>
     <script src="lib/js/angular-google-maps.js"></script>
     
+    <!-- Registration Component -->
+    <script src="components/registration/registration.module.js"></script>
+    <script src="components/registration/registration.controller.js"></script>
+    
     <!-- Menu Component -->
     <script src="components/menu/menu.module.js"></script>
+    <script src="components/authentication/auth.service.js"></script>
     <script src="components/menu/login.controller.js"></script>
+    
     
     <!-- Home Component -->
     <script src="components/home/home.module.js"></script>
@@ -53,6 +59,12 @@
     <script src="components/locations/locations.module.js"></script>
     <script src="components/locations/locations.service.js"></script>
     <script src="components/locations/locations.controller.js"></script>
+    
+    <!-- Communities Component -->
+    <script src="components/communities/communities.module.js"></script>
+    <script src="components/communities/communities.controller.js"></script>
+    
+
     
   </head>
 
