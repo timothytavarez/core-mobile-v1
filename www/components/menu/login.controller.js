@@ -43,6 +43,14 @@
           console.log(err);
         });
         };
+        
+        $scope.logout = function() {
+            
+            auth.$unauth();
+            
+            $scope.closeLogin();
+          
+        };
             
         }
     

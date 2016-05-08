@@ -7,7 +7,7 @@
     .config(['$stateProvider', function ($stateProvider) {
         
         $stateProvider
-        .state('neteApp.profileRoot', {
+        .whenAuthenticatedState('neteApp.profileRoot', {
             url: '/profile',
             views: {
                 'menuContent': {

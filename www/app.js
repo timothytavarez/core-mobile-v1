@@ -10,6 +10,7 @@ angular.module('nete', [
 // Modules that comprise Nete Mobile
   'nete.menu',
   'nete.config',
+  'nete.security',
   'nete.home',
   'nete.content',
   'nete.services',

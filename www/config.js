@@ -8,7 +8,7 @@ angular.module('nete.config', [])
   .constant('version', '1.0.0')
 
   // where to redirect users if they need to authenticate (see security.js)
-  .constant('loginRedirectPath', 'login')
+  .constant('loginRedirectPath', 'neteApp.home')
 
   // The FBURL constant is used throughout the application for DRY purposes.
   // We will have to use the FBURL a LOT for referencing our Firebase.

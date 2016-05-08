@@ -4,7 +4,7 @@
     /* global Firebase */
     
     angular
-    .module('nete.menu')
+    .module('firebase.auth', ['firebase'])
     .factory('auth', auth);
     
     auth.$inject = ['FBURL', '$firebaseAuth'];
