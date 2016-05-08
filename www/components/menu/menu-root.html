@@ -21,6 +21,9 @@
         <ion-item menu-close ng-if="!loggedIn" ng-click="login()">
           Login
         </ion-item>
+        <ion-item menu-close ng-if="loggedIn" ui-sref="neteApp.profileRoot">
+          Profile
+        </ion-item>
         <ion-item menu-close href="#/app/home">
           Home
         </ion-item>

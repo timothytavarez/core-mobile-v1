@@ -7,8 +7,8 @@
     .config(['$stateProvider', function ($stateProvider) {
         
         $stateProvider
-        .state('profileRoot', {
-            url: '/profile/:patronID',
+        .state('neteApp.profileRoot', {
+            url: '/profile',
             views: {
                 'menuContent': {
                     templateUrl: 'components/patrons/patron-profile-root.html',
