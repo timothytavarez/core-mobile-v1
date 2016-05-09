@@ -1,7 +1,7 @@
 {
-  "name": "myapp",
+  "name": "Nete Mobile",
   "version": "1.1.1",
-  "description": "myApp: An Ionic project",
+  "description": "Connecting patrons to libraries",
   "dependencies": {
     "angular-google-maps": "^2.3.2",
     "gulp": "^3.5.6",
