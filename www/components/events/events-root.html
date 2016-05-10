@@ -6,6 +6,13 @@
                 <calendar calendar-mode="mode" event-source="vm.testEvent">
             </div>
             
+            <div class="card" ng-repeat="event in vm.testEvent">
+                <div class="item item-text-wrap">
+                    <p>{{event.eventTitle}}</p>
+                    <p>{{event.startTime | date}} -  {{event.endTime | date}}</p>
+                </div>
+            </div>
+            
         </section>
     </ion-content>
 </ion-view>
