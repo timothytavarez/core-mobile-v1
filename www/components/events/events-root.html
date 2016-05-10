@@ -2,6 +2,10 @@
     <ion-content>
         <section ng-controller="EventsController as vm">
             
+            <div id="calendar" style="height:100%;">
+                <calendar calendar-mode="mode" event-source="vm.testEvent">
+            </div>
+            
         </section>
     </ion-content>
 </ion-view>

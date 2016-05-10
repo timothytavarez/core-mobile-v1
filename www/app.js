@@ -16,7 +16,8 @@ angular.module('nete', [
   'nete.services',
   'nete.locations',
   'nete.communities',
-  'nete.patrons'
+  'nete.patrons',
+  'nete.events'
 
 ])
 .run(function($ionicPlatform) {

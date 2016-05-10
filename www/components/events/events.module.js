@@ -2,7 +2,7 @@
     /* global angular */
     
     angular
-    .module('nete.events')
+    .module('nete.events', ['ui.router', 'ui.rCalendar'])
     .config(['$stateProvider', function ($stateProvider) {
         
         $stateProvider
