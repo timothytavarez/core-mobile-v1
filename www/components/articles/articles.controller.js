@@ -5,9 +5,9 @@
     .module('nete.content')
     .controller('ArticlesController', ArticlesController);
     
-    ArticlesController.$inject = ['articles', '$scope', '$firebaseObject'];
+    ArticlesController.$inject = ['articles', '$firebaseObject'];
     
-    function ArticlesController(articles, $scope, $firebaseObject) {
+    function ArticlesController(articles, $firebaseObject) {
         
         var vm = this;
         
@@ -23,7 +23,7 @@
         function getArticle() {
             
             vm.article = articles.getArticle();
-            console.log(vm.article);
+            
         }
         
     }

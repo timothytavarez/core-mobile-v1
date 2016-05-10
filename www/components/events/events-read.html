@@ -1,0 +1,14 @@
+<ion-view view-title="{{event.eventTitle}}" ng-init="vm.readEvent();">
+    <ion-content>
+        <section ng-controller="EventsController as vm">
+        
+        
+        1. {{event.eventTitle}}
+        2. {{vm.event.eventTitle}}
+        {{vm.event.eventDescription}}
+        
+        {{vm.event}}
+            
+        </section>
+    </ion-content>
+</ion-view>

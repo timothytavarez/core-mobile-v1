@@ -15,6 +15,16 @@
                     controllerAs: 'vm'
                 }
             }
+        })
+        .state('neteApp.readEvent', {
+            url: '/events/:eventID',
+            views: {
+                'menuContent': {
+                    templateUrl: 'components/events/events-read.html',
+                    controller: 'EventsController',
+                    controllerAs: 'vm'
+                }
+            }
         });
         
     }]);

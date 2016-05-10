@@ -5,13 +5,14 @@
     .module('nete.events')
     .controller('EventsController', EventsController);
     
-    EventsController.$inject = ['FBURL', '$cordovaToast'];
+    EventsController.$inject = ['events', '$firebaseObject'];
     
-    function EventsController(FBURL, $cordovaToast) {
+    function EventsController(events, $firebaseObject) {
         
         var vm = this;
+        vm.readEvent = readEvent();
+        vm.readEventList = readEventList();
         
-        console.log('Controller initialized');
         
         vm.testEvent = [{
             eventTitle: 'Adult Coloring Time',
@@ -25,13 +26,17 @@
             allDay: false
         }];
         
-        $cordovaToast
-            .show('Here is a message', 'long', 'center')
-            .then(function(success) {
-              console.log(success);
-            }, function (error) {
-              console.log(error);
-            });
+        function readEvent() {
+            
+            vm.event = events.readEvent();
+            
+        }
+        
+        function readEventList() {
+            
+            vm.eventList = events.readEventList();
+            
+        }
         
     }
     

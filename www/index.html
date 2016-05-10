@@ -16,6 +16,7 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/cordova/ng-cordova.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -27,7 +28,6 @@
     <script src="config.js"></script>
     
     <!-- Nete Dependencies -->
-    <script src="lib/angular/ng-cordova.min.js"></script>
     <script src="lib/js/lodash.js"></script>
     <!--<script src="lib/firebase/firebase.utils.js"></script>-->
     <script src="lib/angular/angular-simple-logger.js"></script>
@@ -75,7 +75,7 @@
     
   </head>
 
-  <body ng-app="nete">
+  <body ng-app="nete" class="platform-android">
     <ion-nav-view></ion-nav-view>
   </body>
 </html>

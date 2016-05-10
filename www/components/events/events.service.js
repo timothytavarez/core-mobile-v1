@@ -1,116 +1,101 @@
-// (function (angular) { 'use strict';
-//     /* global angular */
-//     /* global Firebase */
+(function (angular) { 'use strict';
+    /* global angular */
+    /* global Firebase */
     
-//     angular
-//     .module('nete.events')
-//     .factory('events', events);
+    angular
+    .module('nete.events')
+    .factory('events', events);
     
-//     events.$inject = ['FBURL', '$firebaseObject', '$firebaseArray', '$state'];
+    events.$inject = ['FBURL', '$firebaseObject', '$firebaseArray', '$state',
+    '$stateParams'];
     
-//     function events(FBURL, $firebaseObject, $firebaseArray, $state) {
+    function events(FBURL, $firebaseObject, $firebaseArray, $state,
+    $stateParams) {
         
-//         var eventsRef = new Firebase(FBURL + 'events/');
+        var eventsRef = new Firebase(FBURL + 'events/');
         
-//         var service = {
+        var service = {
             
-//             createEvent: createEvent,
-//             readEvent: readEvent,
-//             readEventList: readEventList,
-//             updateEvent: updateEvent,
-//             deleteEvent: deleteEvent
+            createEvent: createEvent,
+            readEvent: readEvent,
+            readEventList: readEventList,
+            updateEvent: updateEvent,
+            deleteEvent: deleteEvent
             
-//         };
+        };
         
-//         return service;
+        return service;
         
-//         ///////////////
+        ///////////////
         
-//         function createEvent(newEvent) {
+        function createEvent(newEvent) {
             
-//             eventsRef.push({
-//                 eventTitle: newEvent.eventTitle,
-//                 eventDescription: newEvent.eventDescription,
-//                 startTime: newEvent.startTime,
-//                 endTime: newEvent.endTime,
-//                 allDay: newEvent.allDay
-//             }).then(function (toastSuccess) {
+            eventsRef.push({
+                eventTitle: newEvent.eventTitle,
+                eventDescription: newEvent.eventDescription,
+                startTime: newEvent.startTime,
+                endTime: newEvent.endTime,
+                allDay: newEvent.allDay
+            }).then(function (toastSuccess) {
                 
-//                 $state.go('eventsRoot');
+                $state.go('eventsRoot');
                 
-//                 $mdToast.show(
-//                     $mdToast.simple()
-//                     .textContent('Event created!')
-//                     .hideDelay(3000)
-//                 );
-//             }, function (error) {
+            //   TODO toast
+               
+            }, function (error) {
                 
-//                 console.log('Failure');
+                console.log('Failure');
                 
-//                 $mdToast.show(
-//                     $mdToast.simple()
-//                     .textContent('Creation failure. Contact Nete Support.')
-//                     .hideDelay(3000)
-//                 );
+            //   TODO Toast
                 
-//             });
-//         }
+            });
+        }
         
-//         function readEvent(eventID) {
+        function readEvent() {
             
-//             var eventRef = new Firebase(FBURL + 'events/' + eventID);
+            var eventRef = new Firebase(FBURL + 'events/' + $stateParams.eventID);
             
-//             return $firebaseObject(eventRef);
+            return $firebaseObject(eventRef);
             
-//         }
+        }
         
-//         function readEventList() {
+        function readEventList() {
             
-//             return $firebaseArray(eventsRef);
+            return $firebaseArray(eventsRef);
             
-//         }
+        }
         
-//         function updateEvent(event) {
+        function updateEvent(event) {
             
-//             event.$save().then(function (success) {
+            event.$save().then(function (success) {
                 
-//                 $mdToast.show(
-//                     $mdToast.simple()
-//                     .textContent('Event updated!')
-//                     .hideDelay(3000)
-//                 );
+                // TODO toast
                 
-//                 return success;
+                return success;
                 
-//             }, function (error) {
-//                 $mdToast.show(
-//                     $mdToast.simple()
-//                     .textContent('Error! Contact Nete Support.')
-//                     .hideDelay(3000)
-//                 );
-//             });
+            }, function (error) {
+                
+                // TODO toast
+                
+            });
             
-//         }
+        }
         
-//         function deleteEvent(event) {
+        function deleteEvent(event) {
             
-//             event.$remove().then(function (success) {
+            event.$remove().then(function (success) {
                 
-//                 $state.go('eventsRoot');
+                $state.go('eventsRoot');
                 
-//             }, function (error) {
+            }, function (error) {
                 
-//                 $mdToast.show(
-//                     $mdToast.simple()
-//                         .textContent('Deletion failure. Contact Nete Support.')
-//                         .hideDelay(3000)
-//                 );
+                // TODO toast
                 
-//             });
+            });
             
-//         }
+        }
         
         
-//     }
+    }
     
-// })(angular);
+})(angular);

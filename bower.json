@@ -5,6 +5,7 @@
     "ionic": "driftyco/ionic-bower#1.2.4"
   },
   "dependencies": {
-    "ionic-calendar": "^0.2.3"
+    "ionic-calendar": "^0.2.3",
+    "ngCordova": "^0.1.26-alpha"
   }
 }
