@@ -12,6 +12,7 @@
         var vm = this;
         vm.readEvent = readEvent();
         vm.readEventList = readEventList();
+        vm.registerForEvent = registerForEvent;
         
         
         vm.testEvent = [{
@@ -35,6 +36,18 @@
         function readEventList() {
             
             vm.eventList = events.readEventList();
+            
+            var mutatedArray = vm.eventList;
+            
+            mutatedArray.map(function(cb) { return cb.date1; });
+            
+            console.log(mutatedArray);
+            
+        }
+        
+        function registerForEvent() {
+            
+            events.registerForEvent();
             
         }
         

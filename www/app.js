@@ -8,6 +8,7 @@ angular.module('nete', [
   'uiGmapgoogle-maps',
 
 // Modules that comprise Nete Mobile
+  'nete.core',
   'nete.menu',
   'nete.config',
   'nete.security',

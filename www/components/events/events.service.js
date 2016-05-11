@@ -7,10 +7,10 @@
     .factory('events', events);
     
     events.$inject = ['FBURL', '$firebaseObject', '$firebaseArray', '$state',
-    '$stateParams'];
+    '$stateParams', 'auth'];
     
     function events(FBURL, $firebaseObject, $firebaseArray, $state,
-    $stateParams) {
+    $stateParams, auth) {
         
         var eventsRef = new Firebase(FBURL + 'events/');
         
@@ -20,7 +20,8 @@
             readEvent: readEvent,
             readEventList: readEventList,
             updateEvent: updateEvent,
-            deleteEvent: deleteEvent
+            deleteEvent: deleteEvent,
+            registerForEvent: registerForEvent
             
         };
         
@@ -91,6 +92,18 @@
                 
                 // TODO toast
                 
+            });
+            
+        }
+        
+        function registerForEvent() {
+            
+            var eventRef = new Firebase(FBURL + 'events/' + 
+            $stateParams.eventID + '/attendees/');
+            var patron = auth.$getAuth().uid;
+            
+            eventRef.update({
+                [patron]: true
             });
             
         }
